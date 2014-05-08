@@ -76,9 +76,7 @@ dc.dataTable = function(parent, chartGroup) {
         return d3.nest()
             .key(_chart.group())
             .sortKeys(_order)
-            .entries(entries.sort(function(a, b){
-                return _order(_sortBy(a), _sortBy(b));
-            }));
+            .entries(entries);
     }
 
     function renderRows(groups) {
